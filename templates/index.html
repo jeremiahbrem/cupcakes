@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cupcakes</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"
+      href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Cupcakes</h1>
+      <a id="list">Cupcake List</a>
+      <a href="#add_tag" id="add_link">Add Cupcake</a>
+    </div>
+    <div id="search_message">
+      <input id="search_flavor" type="text" placeholder="Search flavors" />
+      <button id="search">Search</button>
+      <h3 id="message"></h3>
+    </div>
+    <div class="container">
+      <div class="cupcake_side">
+        <div class="cupcake_list"></div>
+      </div>
+      <div class="form_side">
+        <a name="form"></a>
+        <a name="add_tag"></a><h2>Add Cupcake</h2>
+        <form id="cupcake_form">
+          <label for="flavor_input">Flavor</label>
+          <input
+            type="text"
+            id="flavor_input"
+            name="flavor"
+            placeholder="Enter flavor"
+          />
+          <label for="size_input">Size</label>
+          <input
+            type="text"
+            id="size_input"
+            name="size"
+            placeholder="Enter size"
+          />
+          <label for="image_input">Photo URL</label>
+          <input
+            type="text"
+            id="image_input"
+            name="image"
+            placeholder="Enter url to photo"
+          />
+          <label for="rating_input">Rating</label>
+          <input
+            type="text"
+            id="rating_input"
+            name="rating"
+            placeholder="Enter rating"
+          />
+          <div class="buttons">
+            <button id="add">Add</button>
+            <button id="save" class="update" hidden>Save</button>
+            <button id="delete" class="update" hidden>Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.js"
+      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script src="static/cupcake.js"></script>
+    <script src="static/script.js"></script>
+  </body>
+</html>
