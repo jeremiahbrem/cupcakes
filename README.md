@@ -15,3 +15,7 @@
 #### Back-end resources:
 * Server API: Flask, Python
 * Database: Flask, SQLAlchemy, Python
+
+#### Testing:
+* Jasmine for JavaScript
+* Python, Flask unit and integration tests
