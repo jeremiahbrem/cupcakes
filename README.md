@@ -1,5 +1,5 @@
 # A Simple Cupcake App
-### This application allows a user to create, edit, and delete cupcakes, as well as search cupcake flavors. All data is submitted and saved in a database.
+### This API database application allows a user to create, edit, and delete cupcakes, as well as search cupcake flavors. All data is submitted and saved in a database.
 #### Cupcake properties include:
 * Flavor
 * Size ("small", "medium", or "large")
