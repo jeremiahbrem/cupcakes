@@ -110,6 +110,7 @@ async function showPage() {
     }
   }
 
+  // displays message to user
   function showMessage(message) {
     $("#message").text(`${message}`);
     setTimeout(()=> {
@@ -120,7 +121,6 @@ async function showPage() {
   // submits flavor query to api and retrieves search
   async function getFlavor(flavor) {
     ids = await Cupcake.searchFlavor(flavor);
-    console.log(ids)
     if (ids.length > 0) {
       let filteredCupcakes = cupcakes.filter((c) => ids.includes(c.id));
       $(".cupcake_list").html("");

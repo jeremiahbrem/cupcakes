@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, jsonify
 from models import db, connect_db, Cupcake
-from forms import CupcakeForm
 from sqlalchemy import desc
 
 app = Flask(__name__)
@@ -9,6 +8,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
 connect_db(app)
+db.drop_all()
 
 db.create_all()
 
@@ -18,9 +18,7 @@ app.config['SECRET_KEY'] = "12h68sy4u65gf1h65dfj48"
 def show_list_page():
     """Returns the HTML cupcake list page"""
 
-    form = CupcakeForm()
-
-    return render_template("index.html", form=form)
+    return render_template("index.html")
 
 @app.route("/api/cupcakes")
 def list_cupcakes():

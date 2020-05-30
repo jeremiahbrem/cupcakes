@@ -8,6 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     z-index: -1;
 }
 
